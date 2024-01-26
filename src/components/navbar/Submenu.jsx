@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Dropdown from './Dropdown';
 import './Navbar.css';
 
 const Submenu = () => {
@@ -18,7 +19,7 @@ const Submenu = () => {
   };
 
   return (
-    <div className="bg-stone-800 shadow sticky top-0 bg-opacity-70 backdrop-filter backdrop-blur-lg">
+    <div className="bg-stone-800 shadow sticky top-0 bg-opacity-80 backdrop-filter backdrop-blur-lg">
       <div className="max-w-screen-xl px-4 py-1 mx-auto">
         <div className="flex items-center">
           <ul className="flex flex-row font-medium mt-0 space-x-1 rtl:space-x-reverse text-xl">
@@ -48,6 +49,8 @@ const Submenu = () => {
                 onMouseEnter={() => handleMouseEnter(2)}
                 onMouseLeave={() => handleMouseLeave(2)}
                 to="/licitacoes"> Licitações </NavLink>
+                {hoverStates[2] && <Dropdown />} {/* Mostrar o Dropdown apenas quando hoverStates[2] for true */}
+
             </li>
 
             <li>
