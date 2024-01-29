@@ -10,6 +10,7 @@ import Infos from './components/Infos';
 import Footer from './components/Footer';
 import Navbar from './components/navbar/Navbar'
 import Banner from './components/banner/Banner';
+import Avisos from './components/Avisos'
 
 /* Páginas */
 import Inicio from "./pages/inicio/Inicio";
@@ -28,6 +29,7 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<>
                         <Banner/>
+                        <Avisos/>
                         <Infos/>
                         <Inicio  />
                     </>} />

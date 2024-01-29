@@ -1,88 +1,101 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-export default class Infos extends React.Component{
-    render() {
-        return (
-            <div class="flex justify-center my-10">
-                {/* Card 1 */}
-                <div class="max-w-full flex-grow">
-                    <div class="flex  h-full w-full bg-gradient-to-r from-teal-800 to-teal-700 p-8 flex-col">
-                        <div class="flex items-center mb-3">
-                            <div
-                                class="w-8 h-8 mr-3 inline-flex items-center justify-stretch text-white flex-shrink-0">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
-                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                                </svg>
-                            </div>
-                            <h2 class="text-white text-lg font-medium">Feature 1</h2>
-                        </div>
-                        <div class="flex flex-col justify-between flex-grow">
-                            <p class="leading-relaxed text-base text-white">
-                                Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.
-                            </p>
-                            <a href="#" class="mt-3 text-black hover:text-blue-600 inline-flex items-center">Learn More
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                 {/* Card 2 */}
-                 <div class="max-w-full flex-grow">
-                    <div class="flex h-full bg-gradient-to-r from-teal-700 to-teal-600 p-8 flex-col">
-                        <div class="flex items-center mb-3">
-                            <div
-                                class="w-8 h-8 mr-3 inline-flex items-center justify-stretch text-white flex-shrink-0">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
-                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                                </svg>
-                            </div>
-                            <h2 class="text-white text-lg font-medium">Feature 1</h2>
-                        </div>
-                        <div class="flex flex-col justify-between flex-grow">
-                            <p class="leading-relaxed text-base text-white">
-                                Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.
-                            </p>
-                            <a href="#" class="mt-3 text-black hover:text-blue-600 inline-flex items-center">Learn More
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                 {/* Card 3 */}
-                 <div class="max-w-full flex-grow">
-                    <div class="flex  h-full bg-gradient-to-r from-teal-600 to-teal-500 p-8 flex-col">
-                        <div class="flex items-center mb-3">
-                            <div
-                                class="w-8 h-8 mr-3 inline-flex items-center justify-stretch text-white flex-shrink-0">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
-                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                                </svg>
-                            </div>
-                            <h2 class="text-white text-lg font-medium">Feature 1</h2>
-                        </div>
-                        <div class="flex flex-col justify-between flex-grow">
-                            <p class="leading-relaxed text-base text-white">
-                                Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.
-                            </p>
-                            <a href="#" class="mt-3 text-black hover:text-blue-600 inline-flex items-center">Learn More
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+export default class Infos extends React.Component {
+  render() {
+    // Array de objetos representando as informações de cada card
+    const cardsData = [
+      {
+        title: 'Seja um Fornecedor',
+        content: 'Junte-se a nós na construção de parcerias sólidas! Seja um fornecedor e faça parte da nossa rede de excelência.',
+        link: '#',
+        svg: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="h-10 w-10 text-white transition-all"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+            />
+          </svg>
+        ),
+      },
+      {
+        title: 'Para Gestores',
+        content: 'Guardiões da integridade: compreenda o papel vital dos gestores e fiscais na condução de contratações íntegras e eficazes.',
+        link: '#',
+        svg: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="h-10 w-10 text-white transition-all"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+            />
+          </svg>
+        ),
+      },
+      {
+        title: 'Guia para Servidores',
+        content: 'Informações necessárias para os servidores solicitarem aquisições em geral.',
+        link: '#',
+        svg: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="h-10 w-10 text-white transition-all"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
+            />
+          </svg>
+        ),
+      }
+      // Adicione mais objetos conforme necessário
+    ];
+
+    return (
+      <div className="flex justify-center my-10">
+        {cardsData.map((card, index) => (
+          <div
+            key={index}
+            className="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
+          >
+            <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-green-500 transition-all duration-300 group-hover:scale-[10]"></span>
+            <div className="relative z-10 mx-auto max-w-md">
+              <span className="grid h-20 w-20 place-items-center rounded-full bg-green-600 transition-all duration-300 group-hover:bg-green-600">
+                {card.svg}
+              </span>
+              <div className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+                <p>{card.content}</p>
+              </div>
+              <div className="pt-5 text-base font-semibold leading-7">
+              </div>
+              <p>
+                  <a href={card.link} className="text-green-500 transition-all duration-300 group-hover:text-white">
+                    {card.title} &rarr;
+                  </a>
+                </p>
             </div>
-        );    
-    }
-};
+          </div>
+        ))}
+      </div>
+    );
+  }
+}

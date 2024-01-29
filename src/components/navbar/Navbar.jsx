@@ -25,8 +25,7 @@ const Navbar = () => {
                   onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Portal de Compras</span>
             </a>
             <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                <a href="tel:5541251234" class="text-sm  text-gray-500 hover:underline">(555) 412-1234</a>
-                <a href="#" class="text-sm  text-blue-600  hover:underline">Login</a>
+               
             </div>
         </div>
     </div>
