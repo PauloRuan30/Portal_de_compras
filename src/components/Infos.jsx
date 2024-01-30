@@ -47,7 +47,7 @@ export default class Infos extends React.Component {
         ),
       },
       {
-        title: 'Guia para Servidores',
+        title: 'Orientações para os Servidores',
         content: 'Informações necessárias para os servidores solicitarem aquisições em geral.',
         link: '#',
         svg: (
@@ -75,7 +75,7 @@ export default class Infos extends React.Component {
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
+            className="group relative cursor-pointer overflow-hidden bg-white px- pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10"
           >
             <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-green-500 transition-all duration-300 group-hover:scale-[10]"></span>
             <div className="relative z-10 mx-auto max-w-md">
@@ -88,7 +88,7 @@ export default class Infos extends React.Component {
               <div className="pt-5 text-base font-semibold leading-7">
               </div>
               <p>
-                  <a href={card.link} className="text-green-500 transition-all duration-300 group-hover:text-white">
+                  <a href={card.link} className="text-green-500 text-xl font-semibold transition-all duration-300 group-hover:text-white">
                     {card.title} &rarr;
                   </a>
                 </p>

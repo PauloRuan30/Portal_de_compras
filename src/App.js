@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Navbar from './components/navbar/Navbar'
 import Banner from './components/banner/Banner';
 import Avisos from './components/Avisos'
+import Sidebar from "./components/Sidebar";
 
 /* Páginas */
 import Inicio from "./pages/inicio/Inicio";

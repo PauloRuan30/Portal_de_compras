@@ -1,11 +1,9 @@
 import React from "react";
 import { StringHTML } from "../../components/StringHTML";
+import Sidebar from "../../components/Sidebar";
 import "../Main.modules.css"
 
 const Planejamento = () => {
-
-    const Cplusplus = require('../../App.css');
-
     const dado = require('../../json/planejamento_de_contratacoes.json')
 
     return (
@@ -14,7 +12,8 @@ const Planejamento = () => {
                 Aqui está a estrutura da página de Planejamento Contratações
             </p>
 
-            <div className="pagPla">
+            <div className="flex flex-auto text-xl">
+                <Sidebar/>
                 <StringHTML htmlString={dado.text.data} />
             </div>
         </div>

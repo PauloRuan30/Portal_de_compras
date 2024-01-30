@@ -74,7 +74,7 @@ const Submenu = () => {
             <li>
               <NavLink
                 href="#" className="hover:underline"
-                style={{ color: hoverStates[5] ? 'green' : 'white' }}
+                style={{ color: hoverStates[5] ? 'lightgreen' : 'white' }}
                 onMouseEnter={() => handleMouseEnter(5)}
                 onMouseLeave={() => handleMouseLeave(5)}
                 to="/planejamento"> Planejamento </NavLink>

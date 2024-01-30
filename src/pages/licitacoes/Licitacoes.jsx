@@ -1,6 +1,6 @@
 import React from "react";
 import { StringHTML } from "../../components/StringHTML";
-import { Sidebar } from "../../components/Sidebar"
+import Sidebar from "../../components/Sidebar";
 
 const Licitacoes = () => {
 
@@ -13,9 +13,11 @@ const Licitacoes = () => {
             <p class="font-bold text-3xl text-center items-center py-10">
                 Aqui está a estrutura da página de Licitações
             </p>
-            <div className="wrapper">
-                <Sidebar />
+            <div className="flex flex-auto text-xl items-center ">
+                <Sidebar /> 
+                <div class="">
                 <StringHTML htmlString={dado.text.data} />
+                </div>
             </div>
         </div>
 
