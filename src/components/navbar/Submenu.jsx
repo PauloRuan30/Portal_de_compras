@@ -29,7 +29,7 @@ const Submenu = () => {
                 style={{ color: hoverStates[0] ? 'lightgreen' : 'white' }}
                 onMouseEnter={() => handleMouseEnter(0)}
                 onMouseLeave={() => handleMouseLeave(0)}
-                to="/"> Início </NavLink>
+                to="/"> Home </NavLink>
             </li>
 
             <li>

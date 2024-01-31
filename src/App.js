@@ -14,7 +14,7 @@ import Avisos from './components/Avisos'
 import Sidebar from "./components/Sidebar";
 
 /* Páginas */
-import Inicio from "./pages/inicio/Inicio";
+import Home from "./pages/home/Home";
 import Contratacoes from "./pages/contratacoes/Contratacoes";
 import Licitacoes from "./pages/licitacoes/Licitacoes";
 import ManuaisENormas from "./pages/manuais_e_normas/Manuais_e_normas"; 
@@ -32,7 +32,7 @@ function App() {
                         <Banner/>
                         <Avisos/>
                         <Infos/>
-                        <Inicio  />
+                        <Home/>
                     </>} />
                     <Route exact path="/licitacoes"  element={<Licitacoes />} />
                     <Route exact path="/contratacoes" element={<Contratacoes />} />

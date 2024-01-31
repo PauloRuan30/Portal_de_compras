@@ -14,7 +14,7 @@ const Licitacoes = () => {
             <p class="font-bold text-3xl text-center items-center py-10">
                 Aqui está a estrutura da página de normas
             </p>
-            <div className="flex flex-auto">
+            <div className="flex flex-auto text-xl">
                 <Sidebar />
                 <StringHTML htmlString={dado.text.data} />
             </div>
