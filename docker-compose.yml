@@ -1,0 +1,7 @@
+version: '3.4'
+
+services:
+  portal-de-compras:
+    image: cevmdocker-registry.tre-ce.jus.br:5000/portal-de-compras
+    ports:
+      - "8082:3000"

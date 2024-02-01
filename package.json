@@ -8,6 +8,7 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
     "autoprefixer": "^10.4.2",
+    "axios": "^1.6.7",
     "postcss": "^8.4.7",
     "prime-react": "^1.0.0",
     "react": "^17.0.2",

@@ -1,0 +1,168 @@
+div#titulo-portal {
+
+    display: inline-block;
+    font-size: 30px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    position: relative;
+    top: 1px;
+}
+
+tbody td {
+
+    vertical-align: top;
+    padding: 5px;
+}
+
+.grid {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.grid th,
+.grid td {
+    border: 1px solid #555353;
+    padding: 8px;
+    text-align: left;
+}
+
+.grid th {
+    background-color: #888a91;
+}
+
+.grid tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.grid a {
+    text-decoration: none;
+    color: #14569c;
+}
+
+.pagPla {
+    
+    justify-content: center;
+    
+}
+
+html .bg-color-primary,
+html .bg-primary {
+    background-color: #006633 !important;
+}
+
+html .text-color-primary {
+    color: #006633 !important;
+}
+
+html .featured-boxes-full-scale>.featured-box-full-primary:nth-child(1) {
+    background-color: #006633;
+}
+
+html .featured-boxes-full-scale>.featured-box-full-primary:nth-child(2) {
+    background-color: #26874E;
+}
+
+html .featured-boxes-full-scale>.featured-box-full-primary:nth-child(3) {
+    background-color: #4DA768;
+}
+
+html .featured-boxes-full-scale>.featured-box-full-primary:nth-child(4) {
+    background-color: #73C883;
+}
+
+#header .header-nav-main.header-nav-main-text-capitalize nav>ul>li>a {
+    text-transform: none;
+}
+
+div#titulo-portal {
+    color: #fff;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    position: relative;
+    top: 1px;
+}
+
+a {
+    color: #006633;
+}
+
+
+
+footer .border-left-footer {
+    border-left: 1px dotted #555;
+}
+
+#header .header-body {
+    height: auto !important;
+    border-bottom-color: rgba(234, 234, 234, 0.5);
+    box-shadow: 0 0 3px rgba(234, 234, 234, 0.5);
+}
+
+.pagPla {
+
+    display: flex;
+    justify-content: center;
+    padding-left: 4.5rem;
+}
+
+
+
+div#titulo-portal {
+
+    display: inline-block;
+    font-size: 30px;
+    line-height: 1rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    position: relative;
+    top: 1px;
+
+}
+
+tbody td {
+
+    vertical-align: top;
+    padding: 5px;
+
+}
+
+.grid {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.grid th,
+.grid td {
+    border: 1px solid #555353;
+    padding: 8px;
+    text-align: left;
+}
+
+.grid th {
+    background-color: #cce0ec;
+}
+
+.grid tbody tr:hover {
+    background-color: #a8a5a5;
+}
+
+.grid a {
+    text-decoration: none;
+    color: #047016;
+}
+
+p {
+    padding-top: 1rem;
+    padding-bottom: 0.6rem;
+}
+
+/********/
+
