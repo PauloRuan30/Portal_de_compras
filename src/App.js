@@ -11,18 +11,25 @@ import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar'
 import Banner from './components/banner/Banner';
 import Avisos from './components/Avisos'
-import Dropdwon from './components/navbar/Dropdown';
+
 /* Páginas */
 import Inicio from "./pages/inicio/Inicio";
-import Fornecedores from "./pages/dfornecedores/Fornecedores";
-import Licitacoes from "./pages/dlicitacoes/Licitacoes";
-import Normas from "./pages/dnormas/Normas"; 
-import Planejamento from "./pages/dplanejamento_e_contratacoes/Planejamento_de_contracoes";
-import DLicitacoes from "./pages/dlicitacoes/DLicitacoes";
-import DFornecedores from "./pages/dfornecedores/DFornecedores";
-import DNormas from "./pages/dnormas/DNormas";
-import DPlanejamentoContratacoes from "./pages/dplanejamento_e_contratacoes/DPlanejamento_e_contratacoes";
-import Orientacoes from "./pages/dorientacoes/Orientacoes";
+import Fornecedores from "./pages/fornecedores/Fornecedores";
+import Licitacoes from "./pages/licitacoes/Licitacoes";
+import Normas from "./pages/normas/Normas"; 
+import Planejamento from "./pages/planejamento_e_contratacoes/Planejamento_de_contracoes";
+import DLicitacoes from "./pages/licitacoes/DLicitacoes";
+// import DR-Fornecedores from "./pages/fornecedores/DFornecedores";
+import DNormas from "./pages/normas/DNormas";
+import DPlanejamentoContratacoes from "./pages/planejamento_e_contratacoes/DPlanejamento_e_contratacoes";
+import Orientacoes from "./pages/orientacoes/Orientacoes";
+import DFornecedores from "./pages/fornecedores/DFornecedores";
+import Gestores from "./pages/gestores/Gestores";
+import DGestores from "./pages/gestores/DGestores";
+import Sistemas from "./pages/sistema/Sistemas";
+import Servidores from "./pages/servidores/Servidores";
+import Comunicados from "./pages/comunicados/Comunicados";
+
 
 /* Hooks, stringtoHtml, etc */
 
@@ -31,7 +38,6 @@ function App() {
         <Router>
             {/* Rotas estáticas da Navbar */}
             <Navbar/>
-            {/*<Dropdwon/>*/}
                 <Routes>
                     <Route exact path="/" element={<>
                         <Banner/>
@@ -40,10 +46,19 @@ function App() {
                         <Inicio  />
                     </>} />
                     <Route exact path="/licitacoes"  element={<Licitacoes />} />
-                    <Route exact path="/fornecedores" element={<Fornecedores />} />
                     <Route exact path="/normas" element={<Normas/>}/>
                     <Route exact path="/planejamento" element={<Planejamento/>}/>
                     <Route exact path="/orientacoes" element={<Orientacoes/>}/>
+                    <Route exact path="/fornecedores" element={<Fornecedores/>}/>
+                    <Route exact path="/Sistemas" element={<Sistemas/>}/>
+                    <Route exact path="/gestores" element={<Gestores/>}/>
+                    <Route exact path="/servidores" element={<Servidores/>}/>
+                    <Route exact path="/comunicados" element={<Comunicados/>}/>
+                    
+                    
+                    <Route path="/planejamento/:rota" element={<DPlanejamentoContratacoes/>}>
+                        <Route path=":rota" element={<DPlanejamentoContratacoes/>}></Route>
+                    </Route>
 
                     <Route path="/licitacoes/:rota" element={<DLicitacoes/>}>
                         <Route path=":rota" element={<DLicitacoes/>}></Route>
@@ -56,6 +71,9 @@ function App() {
                     </Route>
                     <Route path="/planejamento/:rota" element={<DPlanejamentoContratacoes/>}>
                         <Route path=":rota" element={<DPlanejamentoContratacoes/>}></Route>
+                    </Route>
+                    <Route path="/gestores/:rota" element={<DGestores/>}>
+                        <Route path=":rota" element={<DGestores/>}></Route>
                     </Route>
                 </Routes>
                 
