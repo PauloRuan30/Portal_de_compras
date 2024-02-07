@@ -3,7 +3,7 @@ import axios from "axios";
 import { StringHTML } from "../../components/StringHTML";
 import { useParams } from "react-router-dom";
 
-const DFornecedores = () => {
+const DContratacoes = () => {
     const {rota} = useParams();
     
     const [post, setPost] = React.useState(null)
@@ -13,7 +13,7 @@ const DFornecedores = () => {
         async function getPost()
         {
 
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/fornecedores/${rota}`)
+            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/contratacoes/${rota}`)
             setPost(response.data)
         }
         getPost();
@@ -24,14 +24,15 @@ const DFornecedores = () => {
     return(
         <div>
         <p class="font-bold text-3xl text-center"> 
-        Aqui está a estrutura da página de Licitações
+        Aqui está a estrutura da página de contratações
 
         </p>            
         
         <div className="flex flex-auto text-xl items-center">
+                {/* <Sidebar />  */}
                 <StringHTML htmlString={post.data} />
         </div>
         </div>
     );
 }
-export default DFornecedores;
+export default DContratacoes;

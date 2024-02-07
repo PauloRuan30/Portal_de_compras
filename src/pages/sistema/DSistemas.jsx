@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import { StringHTML } from "../../components/StringHTML";
 import { useParams } from "react-router-dom";
-import Sidebar from "../../components/Sidebar";
 
 const DSistemas = () => {
     const {rota} = useParams();

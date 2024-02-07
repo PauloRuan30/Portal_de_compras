@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import { StringHTML } from "../../components/StringHTML";
 import { useParams } from "react-router-dom";
-import Sidebar from "../../components/Sidebar";
 
 const DGestores = () => {
     const {rota} = useParams();
@@ -30,8 +29,7 @@ const DGestores = () => {
         </p>            
         
         <div className="flex flex-auto text-xl items-center">
-         
-                <StringHTML htmlString={post.data} />
+        <StringHTML htmlString={post.data} />
         </div>
         </div>
 

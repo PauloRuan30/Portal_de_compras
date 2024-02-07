@@ -1,6 +1,5 @@
 import React from "react";
 import { StringHTML } from "../../components/StringHTML";
-import Sidebar from "../../components/Sidebar";
 import "../Main.modules.css"
 import axios from "axios";
 

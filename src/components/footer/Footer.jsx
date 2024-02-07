@@ -54,7 +54,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <hr class="my-6 border-blueGray-300"/>
+          <hr class="my-6 border-gray-300"/>
           <div class="flex flex-wrap items-center md:justify-between justify-center">
             <div class="w-full md:w-4/12 px-4 mx-auto text-center">
               <div class="text-sm text-white font-semibold py-1">

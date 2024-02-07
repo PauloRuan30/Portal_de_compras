@@ -1,19 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Componente de Cartão Reutilizável
-const Card = ({ iconBgColor, icon, title, description }) => (
-  <div className="rounded-xl bg-transparent p-7 text-center hover:shadow-lg">
+const Card = ({ linkRoute, iconBgColor, icon, title, description }) => (
+  <Link to={`${linkRoute}`} className="rounded-xl bg-transparent p-7 text-center hover:shadow-lg">
     <div className={`mx-auto flex h-20 w-20 mb-3 items-center justify-center rounded-full shadow-lg ${iconBgColor}`}>
       {icon}
     </div>
     <h1 className="text-green-900 text-2xl font-bold lg:px-14">{title}</h1>
     <p className="px-4 text-lg text-gray-500">{description}</p>
-  </div>
+  </Link>
 );
 
 // Dados para os Cartões
 const cardData = [
   {
+    linkRoute : '/contratacoes',
     iconBgColor: 'bg-[#15590a]',
     icon: 
     <svg class="w-[50px] h-[50px] text-green-50" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -23,6 +25,7 @@ const cardData = [
     description: 'Acompanhe todas as informações sobre as nossas contratações.',
   },
   {
+    linkRoute : '/licitacoes',
     iconBgColor: 'bg-gradient-to-t from-gray-300 to-gray-200',
     icon:   
     <svg class="w-[50px] h-[50px] text-[#15590a]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

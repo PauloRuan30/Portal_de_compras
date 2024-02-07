@@ -18,18 +18,21 @@ import Fornecedores from "./pages/fornecedores/Fornecedores";
 import Licitacoes from "./pages/licitacoes/Licitacoes";
 import Normas from "./pages/normas/Normas"; 
 import Planejamento from "./pages/planejamento_e_contratacoes/Planejamento_de_contracoes";
-import DLicitacoes from "./pages/licitacoes/DLicitacoes";
-// import DR-Fornecedores from "./pages/fornecedores/DFornecedores";
-import DNormas from "./pages/normas/DNormas";
-import DPlanejamentoContratacoes from "./pages/planejamento_e_contratacoes/DPlanejamento_e_contratacoes";
-import Orientacoes from "./pages/orientacoes/Orientacoes";
-import DFornecedores from "./pages/fornecedores/DFornecedores";
-import Gestores from "./pages/gestores/Gestores";
-import DGestores from "./pages/gestores/DGestores";
 import Sistemas from "./pages/sistema/Sistemas";
 import Servidores from "./pages/servidores/Servidores";
 import Comunicados from "./pages/comunicados/Comunicados";
-
+import Gestores from "./pages/gestores/Gestores";
+import Orientacoes from "./pages/orientacoes/Orientacoes";
+import Contratacoes from "./pages/contratacoes/Contratacoes";
+// import DR-Fornecedores from "./pages/fornecedores/DFornecedores";
+import DNormas from "./pages/normas/DNormas";
+import DPlanejamentoContratacoes from "./pages/planejamento_e_contratacoes/DPlanejamento_e_contratacoes";
+import DFornecedores from "./pages/fornecedores/DFornecedores";
+import DGestores from "./pages/gestores/DGestores";
+import DContratacoes from "./pages/contratacoes/DContratacoes";
+import DLicitacoes from "./pages/licitacoes/DLicitacoes";
+import RegistroPreco from "./pages/registro_de_preco/Registro_de_preco";
+import DRegistroPreco from "./pages/registro_de_preco/DRegistro_de_preco";
 
 /* Hooks, stringtoHtml, etc */
 
@@ -54,12 +57,12 @@ function App() {
                     <Route exact path="/gestores" element={<Gestores/>}/>
                     <Route exact path="/servidores" element={<Servidores/>}/>
                     <Route exact path="/comunicados" element={<Comunicados/>}/>
-                    
+                    <Route exact path="/contratacoes" element={<Contratacoes/>}/>
+                    <Route exact path="/registro-de-preco" element={<RegistroPreco/>}/>
                     
                     <Route path="/planejamento/:rota" element={<DPlanejamentoContratacoes/>}>
                         <Route path=":rota" element={<DPlanejamentoContratacoes/>}></Route>
                     </Route>
-
                     <Route path="/licitacoes/:rota" element={<DLicitacoes/>}>
                         <Route path=":rota" element={<DLicitacoes/>}></Route>
                     </Route>
@@ -74,6 +77,12 @@ function App() {
                     </Route>
                     <Route path="/gestores/:rota" element={<DGestores/>}>
                         <Route path=":rota" element={<DGestores/>}></Route>
+                    </Route>
+                    <Route path="/contratacoes/:rota" element={<DContratacoes/>}>
+                        <Route path=":rota" element={<DContratacoes/>}></Route>
+                    </Route>
+                    <Route path="/registro-de-preco/:rota" element={<DRegistroPreco/>}>
+                        <Route path=":rota" element={<DRegistroPreco/>}></Route>
                     </Route>
                 </Routes>
                 

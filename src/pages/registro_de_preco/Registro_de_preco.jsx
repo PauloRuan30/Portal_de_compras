@@ -3,7 +3,7 @@ import axios from "axios";
 import { StringHTML } from "../../components/StringHTML";
 import { useParams } from "react-router-dom";
 
-const DFornecedores = () => {
+const RegistroPreco = () => {
     const {rota} = useParams();
     
     const [post, setPost] = React.useState(null)
@@ -13,7 +13,7 @@ const DFornecedores = () => {
         async function getPost()
         {
 
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/fornecedores/${rota}`)
+            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/sistema-de-registro-de-preco`)
             setPost(response.data)
         }
         getPost();
@@ -32,6 +32,7 @@ const DFornecedores = () => {
                 <StringHTML htmlString={post.data} />
         </div>
         </div>
+
     );
 }
-export default DFornecedores;
+export default RegistroPreco;

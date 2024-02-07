@@ -29,7 +29,6 @@ const DNormas = () => {
         </p>            
         
         <div className="flex flex-auto text-xl items-center">
-                {/* <Sidebar />  */}
                 <StringHTML htmlString={post.data} />
         </div>
         </div>

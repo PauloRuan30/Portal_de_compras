@@ -1,6 +1,5 @@
 import React from "react";
 import { StringHTML } from "../../components/StringHTML";
-import Sidebar from "../../components/Sidebar";
 import axios from "axios";
 
 const Fornecedores = () => {
@@ -28,7 +27,6 @@ const Fornecedores = () => {
             </p>
 
             <div className="flex flex-auto text-xl">
-                {/* <Sidebar /> */}
                 <StringHTML htmlString={post.data} />
             </div>
         </div>

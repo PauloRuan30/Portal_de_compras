@@ -25,12 +25,12 @@ const Navbar = () => {
           <div className="pl-4 flex items-center">
             <a
               className="toggleColour text-black no-underline hover:no-underline font-bold text-3xl lg:text-4xl"
-              href="#"
+              href="/"
               style={{ color: isHovering ? 'green' : 'black' }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <img className="h-14 pr-2 fill-current inline" src="/Marca_TRE.svg">
+              <img className="h-20 pr-2 fill-current inline" src="/Marca_TRE.svg">
                 {/* SVG content */}
               </img>
               Portal de Compras
@@ -53,7 +53,7 @@ const Navbar = () => {
                   style={{ color: hoverStates[1] ? 'green' : 'black' }}
                   onMouseEnter={() => handleMouseEnter(1)}
                   onMouseLeave={() => handleMouseLeave(1)}
-                  to="/planejamento_de_contratacoes"> Planejamento </NavLink>
+                  to="/planejamento"> Planejamento </NavLink>
               </li>
 
               <li>
@@ -80,7 +80,7 @@ const Navbar = () => {
                   style={{ color: hoverStates[4] ? 'green' : 'black' }}
                   onMouseEnter={() => handleMouseEnter(4)}
                   onMouseLeave={() => handleMouseLeave(4)}
-                  to="/normas_e_manuais"> Normas e Manuais </NavLink>
+                  to="/normas">Manuais e Normas</NavLink>
               </li>
 
               <li>
@@ -89,7 +89,7 @@ const Navbar = () => {
                   style={{ color: hoverStates[5] ? 'green' : 'black' }}
                   onMouseEnter={() => handleMouseEnter(5)}
                   onMouseLeave={() => handleMouseLeave(5)}
-                  to="/resgitro_de_precos"> Registro de preços </NavLink>
+                  to="/registro-de-preco"> Registro de preços </NavLink>
               </li>
 
               </ul>

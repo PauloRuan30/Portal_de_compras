@@ -24,7 +24,6 @@ const Normas = () => {
                 Aqui está a estrutura da página de normas
             </p>
             <div className="flex flex-auto">
-                {/* <Sidebar /> */}
                 <StringHTML htmlString={post.data} />
             </div>
         </div>

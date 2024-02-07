@@ -1,6 +1,5 @@
 import React from "react";
 import { StringHTML } from "../../components/StringHTML";
-import Sidebar from "../../components/Sidebar";
 import axios from "axios";
 
 const Licitacoes = () => {
@@ -26,7 +25,6 @@ const Licitacoes = () => {
                 Aqui está a estrutura da página de Licitações
             </p>
             <div className="flex flex-auto text-xl items-center">
-                {/* <Sidebar />  */}
                 <StringHTML htmlString={post.data} />
             </div>
         </div>
