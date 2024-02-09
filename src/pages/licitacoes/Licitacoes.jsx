@@ -1,6 +1,7 @@
 import React from "react";
 import { StringHTML } from "../../components/StringHTML";
 import axios from "axios";
+import "../Main.modules.css"
 
 const Licitacoes = () => {
     const [post, setPost] = React.useState(null)
@@ -24,7 +25,7 @@ const Licitacoes = () => {
             <p class="font-bold text-3xl text-center items-center py-10">
                 Aqui está a estrutura da página de Licitações
             </p>
-            <div className="flex flex-auto text-xl items-center">
+            <div id="content" className="flex flex-auto text-xl items-center">
                 <StringHTML htmlString={post.data} />
             </div>
         </div>

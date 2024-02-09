@@ -80,7 +80,7 @@ const Navbar = () => {
                   style={{ color: hoverStates[4] ? 'green' : 'black' }}
                   onMouseEnter={() => handleMouseEnter(4)}
                   onMouseLeave={() => handleMouseLeave(4)}
-                  to="/normas">Manuais e Normas</NavLink>
+                  to="/normas">Normas</NavLink>
               </li>
 
               <li>
@@ -90,6 +90,15 @@ const Navbar = () => {
                   onMouseEnter={() => handleMouseEnter(5)}
                   onMouseLeave={() => handleMouseLeave(5)}
                   to="/registro-de-preco"> Registro de preços </NavLink>
+              </li>
+
+              <li>
+                <NavLink
+                  href="#" className="hover:underline"
+                  style={{ color: hoverStates[6] ? 'green' : 'black' }}
+                  onMouseEnter={() => handleMouseEnter(6)}
+                  onMouseLeave={() => handleMouseLeave(6)}
+                  to="/sistemas"> Sistemas </NavLink>
               </li>
 
               </ul>

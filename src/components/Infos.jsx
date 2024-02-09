@@ -1,19 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Componente de Cartão Reutilizável
-const Card = ({ bgColor, iconBgColor, icon, title, description }) => (
-  <div className={`"rounded-xl ${bgColor} p-10 text-center "`}>
+const Card = ({ linkRoute, bgColor, iconBgColor, icon, title, description }) => (
+  <Link to={`${linkRoute}`} className={`" ${bgColor} p-10 pt-24 text-center transition hover:scale-105 hover:-rotate-1"`}>
     <div className={`mx-auto flex h-20 w-20 mb-3 items-center justify-center  ${iconBgColor}`}>
       {icon}
     </div>
     <h1 className="text-white text-2xl font-bold lg:px-14">{title}</h1>
     <p className="px-4 text-lg text-gray-50">{description}</p>
-  </div>
+  </Link>
 );
 
 // Dados para os Cartões
 const cardData = [
   {
+    linkRoute : '/fornecedores',
     bgColor : 'bg-green-800',
     iconBgColor: 'bg-green-800',
     icon: 
@@ -24,6 +26,7 @@ const cardData = [
     description: 'Junte-se a nós na construção de parcerias sólidas! Seja um fornecedor e faça parte da nossa rede de excelência.',
   },
   {
+    linkRoute : '/gestores',
     bgColor : 'bg-green-700',
     iconBgColor: 'bg-green-700',
     icon:   
@@ -34,6 +37,7 @@ const cardData = [
    description: 'Guardiões da integridade: compreenda o papel vital dos gestores e fiscais na condução de contratações íntegras e eficazes.',
   },
   {
+    linkRoute : '/Servidores',
     bgColor : 'bg-green-600',
     iconBgColor: 'bg-green-600',
     icon: 
@@ -47,7 +51,7 @@ const cardData = [
 
 // Componente de Cartões
 const Infos = () => (
-  <div className="py-16">
+  <div className="p">
     <div className="grid md:grid-cols-3 md:gap-0">
       {cardData.map((card, index) => (
         <Card key={index} {...card} />

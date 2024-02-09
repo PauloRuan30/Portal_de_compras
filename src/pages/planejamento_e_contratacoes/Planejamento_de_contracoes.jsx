@@ -2,6 +2,7 @@ import React from "react";
 import { StringHTML } from "../../components/StringHTML";
 import "../Main.modules.css"
 import axios from "axios";
+import DyBanner from "../../components/pages_banners/Dynamic_Banner";
 
 const Planejamento = () => {
     const [post, setPost] = React.useState(null)
@@ -20,11 +21,7 @@ const Planejamento = () => {
 
     return (
         <div>
-            <p class="font-bold text-3xl text-center items-center py-10">
-                Aqui está a estrutura da página de Planejamento Contratações
-            </p>
-
-            <div className="flex flex-auto text-xl">
+            <div className="flex-auto text-xl">
                 <StringHTML htmlString={post.data} />
             </div>
         </div>

@@ -1,13 +1,5 @@
 import React from 'react'
 
-import {
-    FaFacebook,
-    FaGithub,
-    FaInstagram,
-    FaTwitter,
-    FaTwitch,
-} from 'react-icons/fa'
-
 const Footer = () => {
     return (
       <footer class="flex-auto bg-green-800 pt-8 pb-6">
@@ -15,22 +7,27 @@ const Footer = () => {
           <div class="flex flex-wrap text-left lg:text-left">
             <div class="w-full lg:w-6/12 px-4">
               <h4 class="text-3xl font-bold text-gray-50">Tribunal Regional Eleitoral do Ceará</h4>
-              <h5 class="text-lg mt-0 mb-2 text-gray-100">
+              {/* <h5 class="text-lg mt-0 mb-2 text-gray-100">
                 Encontre-nos em qualquer uma dessas plataformas
-              </h5>
+              </h5> */}
               <div class="mt-6 lg:mb-0 mb-6">
-                <button class="bg-gray-300 text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                  <i class="fab fa-twitter"></i></button><button class="bg-gray-300 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                  <i class="fab fa-facebook-square"></i></button><button class="bg-gray-300 text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                  <i class="fab fa-dribbble"></i></button><button class="bg-gray-300 text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                  <i class="fab fa-github"></i>
+                {/* <button class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10"
+                    fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg>
                 </button>
+                 */}
               </div>
             </div>
             <div class="w-full lg:w-6/12 px-3">
               <div class="flex flex-wrap items-top mb-6">
                 <div class="w-full lg:w-4/12 px-3 ml-auto">
-                  <span class="block uppercase text-blueGray-500 text-xl font-bold mb-2">Useful Links</span>
+                  {/* <span class="block uppercase text-blueGray-500 text-xl font-bold mb-2"></span>
                   <ul class="list-unstyled">
                     <li>
                       <a class="text-gray-100 hover:text-gray-200 font-semibold block text-lg" href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
@@ -38,16 +35,16 @@ const Footer = () => {
                     <li>
                       <a class="text-gray-100 hover:text-gray-200 font-semibold block text-lg" href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </div>
-                <div class="w-full lg:w-4/12 px-3">
-                  <span class="block uppercase text-blueGray-500 text-xl font-bold mb-2">Other Resources</span>
+                <div class="w-full lg:w-3/5 px-3">
+                  <span class="block uppercase text-blueGray-500 text-xl font-bold">Contatos</span>
                   <ul class="list-unstyled">
                     <li>
-                      <a class="text-gray-100 hover:text-gray-200 font-semibold block text-lg" href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT License</a>
+                      <a class="text-gray-100 hover:text-gray-200 font-semibold block text-lg" href="#">Rua Dr. Pontes Neto 800 - Eng. Luciano Cavalcante - Fortaleza/CE - CEP 60813-600</a>
                     </li>
                     <li>
-                      <a class="text-gray-100 hover:text-gray-200 font-semibold block text-lg" href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                      <a class="text-gray-100 hover:text-gray-200 font-semibold block text-lg" href="#">Tel: (85) 3453-3500</a>
                     </li>
                   </ul>
                 </div>

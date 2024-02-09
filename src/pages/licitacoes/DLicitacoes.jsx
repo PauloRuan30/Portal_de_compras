@@ -24,11 +24,11 @@ const DLicitacoes = () => {
 
     return(
         <div>
-        <p class="font-bold text-3xl text-center"> 
+        <p className="font-bold text-3xl text-center"> 
         Aqui está a estrutura da página de Licitações
 
         </p>            
-        <div className="flex flex-auto text-xl items-center">
+        <div id="content" className="flex flex-auto text-xl items-center">
                 <StringHTML htmlString={post.data} />
             </div>
         </div>

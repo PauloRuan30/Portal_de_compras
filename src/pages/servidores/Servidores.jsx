@@ -10,7 +10,7 @@ const Servidores = () => {
     {
         async function getPost()
         {
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/servidores`)
+            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/servidores/servidores`)
             setPost(response.data)
         }
         getPost();

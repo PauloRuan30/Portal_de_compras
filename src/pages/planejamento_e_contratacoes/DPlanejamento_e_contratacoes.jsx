@@ -23,17 +23,10 @@ const DPlanejamentoContratacoes = () => {
 
     return(
         <div>
-        <p class="font-bold text-3xl text-center"> 
-        Aqui está a estrutura da página de Licitações
-
-        </p>            
-        
-        <div className="flex flex-auto text-xl items-center">
-         
+            <div className="flex-auto text-xl">
                 <StringHTML htmlString={post.data} />
+            </div>
         </div>
-        </div>
-
     );
 }
 export default DPlanejamentoContratacoes;
