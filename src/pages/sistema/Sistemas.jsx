@@ -20,9 +20,7 @@ const Sistemas = () => {
 
     return (
         <div>
-            <p class="font-bold text-3xl text-center items-center py-10">
-                Aqui está a estrutura da página de Planejamento Contratações
-            </p>
+          
 
             <div className="flex flex-auto text-xl">
                 <StringHTML htmlString={post.data} />

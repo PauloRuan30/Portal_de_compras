@@ -25,8 +25,7 @@ const DLicitacoes = () => {
     return(
         <div>
         <p className="font-bold text-3xl text-center"> 
-        Aqui está a estrutura da página de Licitações
-
+       
         </p>            
         <div id="content" className="flex flex-auto text-xl items-center">
                 <StringHTML htmlString={post.data} />

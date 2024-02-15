@@ -67,7 +67,9 @@ function App() {
                         <Route path=":rota" element={<DPlanejamentoContratacoes/>}></Route>
                     </Route>
                     <Route path="/licitacoes/:rota" element={<DLicitacoes/>}>
+                        <Route path=":rota" element={<DLicitacoes/>}>
                         <Route path=":rota" element={<DLicitacoes/>}></Route>
+                        </Route>
                     </Route>
                     <Route path="/fornecedores/:rota" element={<DFornecedores/>}>
                         <Route path=":rota" element={<DFornecedores/>}></Route>

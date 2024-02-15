@@ -25,7 +25,7 @@ const DFornecedores = () => {
         <div>
                   
         
-        <div className="flex flex-auto text-xl items-center">
+        <div id="content" className="flex flex-auto text-xl items-center">
                 <StringHTML htmlString={post.data} />
         </div>
         </div>

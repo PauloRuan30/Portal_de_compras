@@ -1,165 +1,98 @@
-div#titulo-portal {
-
-    display: inline-block;
-    font-size: 30px;
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    position: relative;
-    top: 1px;
+#content-core a {
+  border-bottom: 1px solid #cccccc;
+}
+#content a {
+    font-weight: bold;
+  color: #15590a;
+  text-decoration: underline;
+}
+#content a:hover{
+    text-decoration: underline;
+    color: #1b960b;
 
 }
-
-
-
-
-html .bg-color-primary,
-html .bg-primary {
-    background-color: #006633 !important;
+#content a {
+  background: transparent;
 }
 
-html .text-color-primary {
-    color: #006633 !important;
+#content * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#content body {
+  word-wrap: break-word;
+}
+#content body {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.42857143;
+  color: black;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
+  max-width: auto;
+  max-height: auto;
 }
 
-html .featured-boxes-full-scale>.featured-box-full-primary:nth-child(1) {
-    background-color: #006633;
-}
-
-html .featured-boxes-full-scale>.featured-box-full-primary:nth-child(2) {
-    background-color: #26874E;
-}
-
-html .featured-boxes-full-scale>.featured-box-full-primary:nth-child(3) {
-    background-color: #4DA768;
-}
-
-html .featured-boxes-full-scale>.featured-box-full-primary:nth-child(4) {
-    background-color: #73C883;
-}
-
-#header .header-nav-main.header-nav-main-text-capitalize nav>ul>li>a {
-    text-transform: none;
-}
-
-div#titulo-portal {
-    color: #fff;
-    display: inline-block;
-    font-size: 30px;
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    position: relative;
-    top: 1px;
-}
-
-a {
-    color: #006633;
-}
-
-
-
-footer .border-left-footer {
-    border-left: 1px dotted #555;
-}
-
-
-#header .header-body {
-    height: auto !important;
-    border-bottom-color: rgba(234, 234, 234, 0.5);
-    box-shadow: 0 0 3px rgba(234, 234, 234, 0.5);
-}
-
-.pagPla {
-
-    display: flex;
-    justify-content: center;
-    padding-left: 4.5rem;
-}
-
-
-
-div#titulo-portal {
-
-    display: inline-block;
-    font-size: 30px;
-    line-height: 1rem;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
-    position: relative;
-    top: 1px;
-
-}
-tbody{
-    vertical-align: top;
-    border-collapse: collapse;
-    border: 1px solid rgb(126, 124, 124);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    text-align: left;
-}
-
-
-tbody td{
-    border: solid;
-    border-top: 10px;
-    border-left: 10px;
-}
-
-.grid th {
-    background-color: #cce0ec;
-}
-
-.grid tbody tr:hover {
-    background-color: #a8a5a5;
-}
-
-.grid a {
-    text-decoration: none;
-    color: #047016;
-}
-
-p {
-    padding-top: 1rem;
-    padding-bottom: 4.6rem;
-    font-size: 3rem;
-
-}
-
-
-h2{ font-size: 2rem;
-    padding-left: 1.5rem;
-
-}
-
-#content p{
-    font-size: 2rem ;
-    font-weight: bolder;
-    
-
-    
-}
-#content li{
-    border: solid #006633;
-    border-radius: 10px;
-    border-width: 1px;
-    
-}
 #content {
-    justify-content: center;
-    margin: 0%;
-    padding: 0%;
-    max-width: auto;
-    max-height: auto;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
+  max-width: auto;
+  max-height: auto;
 }
-#content p{
-    
-    max-height: 0;
-}
-/********/
 
+#content .grid{
+    display: block;
+}
+
+tbody  tr:nth-child(2n+1)  td,  tbody  tr:nth-child(2n+1)  th
+{
+  background-color: #dddcdc;
+  
+}
+ thead  tr  th,  tbody  tr  th,  tfoot  tr  th,  thead  tr  td,  tbody  tr  td,  tfoot  tr  td
+{
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 0 solid #5f5f5f;
+  border-collapse: collapse;
+  color:black;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+table  thead  tr  th, table  tbody  tr  th, table  tfoot  tr  th, table  thead  tr  td, table  tbody  tr  td, table  tfoot  tr  td
+{
+   
+  border: 1px solid #616161;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(229, 229, 229);
+}
+table  thead  tr  th, table  tbody  tr  th, table  tfoot  tr  th, table  thead  tr  td, table  tbody  tr  td, table  tfoot  tr  td
+{
+  vertical-align: top;
+  border-top: 1px solid #616161;
+}
+td, th
+{
+  padding: 0;
+}
+*
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+table
+{
+  font-weight: 400;
+  color: #696969;
+}
+table
+{
+  border-collapse: collapse;
+  border-spacing: 0;
+}

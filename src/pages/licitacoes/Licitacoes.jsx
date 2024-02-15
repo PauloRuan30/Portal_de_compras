@@ -23,9 +23,9 @@ const Licitacoes = () => {
         <main>
         <div>
             <p class="font-bold text-3xl text-center items-center py-10">
-                Aqui está a estrutura da página de Licitações
+            
             </p>
-            <div id="content" className="flex flex-auto text-xl items-center">
+            <div id="content"className="flex flex-auto text-xl items-center">
                 <StringHTML htmlString={post.data} />
             </div>
         </div>
