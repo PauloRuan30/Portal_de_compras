@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { StringHTML } from "../../components/StringHTML";
 import { useParams } from "react-router-dom";
+import "../Main.modules.css"
 
 const DPlanejamentoContratacoes = () => {
     const {rota} = useParams();
@@ -13,7 +14,7 @@ const DPlanejamentoContratacoes = () => {
         async function getPost()
         {
 
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/servidores/${rota}`)
+            const response = await axios.post(`https://apps.tre-ce.jus.br/api-portal-de-compras/servidores/${rota}`)
             setPost(response.data)
         }
         getPost();
@@ -27,7 +28,7 @@ const DPlanejamentoContratacoes = () => {
             
         </p>            
         
-        <div className="flex flex-auto text-xl items-center">
+        <div id="content" className="flex flex-auto text-xl items-center">
          
                 <StringHTML htmlString={post.data} />
         </div>

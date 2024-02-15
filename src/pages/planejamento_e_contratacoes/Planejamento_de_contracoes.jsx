@@ -2,7 +2,8 @@ import React from "react";
 import { StringHTML } from "../../components/StringHTML";
 import "../Main.modules.css"
 import axios from "axios";
-import DyBanner from "../../components/pages_banners/Dynamic_Banner";
+import "../Main.modules.css"
+
 
 const Planejamento = () => {
     const [post, setPost] = React.useState(null)
@@ -11,7 +12,7 @@ const Planejamento = () => {
     {
         async function getPost()
         {
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/planejamento-de-contratacoes/planejamento-de-contratacoes`)
+            const response = await axios.post(`https://apps.tre-ce.jus.br/api-portal-de-compras/planejamento-de-contratacoes/planejamento-de-contratacoes`)
             setPost(response.data)
         }
         getPost();
@@ -21,7 +22,7 @@ const Planejamento = () => {
 
     return (
         <div>
-            <div className="flex-auto text-xl">
+            <div id="content" className="flex-auto text-xl">
                 <StringHTML htmlString={post.data} />
             </div>
         </div>

@@ -10,7 +10,7 @@ const Comunicados = () => {
     {
         async function getPost()
         {
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/comunicados/comunicados`)
+            const response = await axios.post(`https://apps.tre-ce.jus.br/api-portal-de-compras/comunicados/comunicados`)
             setPost(response.data)
         }
         getPost();

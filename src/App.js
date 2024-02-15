@@ -8,10 +8,11 @@ import {
 /* Componentes */
 import Infos from './components/Infos';
 import Footer from './components/footer/Footer';
-import Navbar from './components/navbar/Navbar'
+import Navbar from './components/navbar/Navbar';
+import HomeBanner from './components/banner/HomeBanner'
 import Banner from './components/banner/Banner';
-import Avisos from './components/Avisos'
-import DyBanner from "./components/pages_banners/Dynamic_Banner";
+import Avisos from './components/Avisos';
+import Cards from './components/Cards';
 
 /* Páginas */
 import Inicio from "./pages/inicio/Inicio";
@@ -40,20 +41,21 @@ import DServidores from "./pages/servidores/DServidores";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/portal-de-compras">
             {/* Rotas estáticas da Navbar */}
             <Navbar/>
-            <DyBanner/>
+            <Banner/>
                 <Routes>
                     <Route exact path="/" element={<>
-                        <Banner/>
+                        <HomeBanner/>
+                        <Cards/>
                         <Avisos/>
                         <Infos/>
                         <Inicio  />
                     </>} />
                     <Route exact path="/licitacoes"  element={<Licitacoes />} />
                     <Route exact path="/normas" element={<Normas/>}/>
-                    <Route exact path="/planejamento" element={<Planejamento/>}/>
+                    <Route exact path="/planejamento-de-contratacoes" element={<Planejamento/>}/>
                     <Route exact path="/orientacoes" element={<Orientacoes/>}/>
                     <Route exact path="/fornecedores" element={<Fornecedores/>}/>
                     <Route exact path="/sistemas" element={<Sistemas/>}/>
@@ -61,11 +63,9 @@ function App() {
                     <Route exact path="/servidores" element={<Servidores/>}/>
                     <Route exact path="/comunicados" element={<Comunicados/>}/>
                     <Route exact path="/contratacoes" element={<Contratacoes/>}/>
-                    <Route exact path="/registro-de-preco" element={<RegistroPreco/>}/>
+                    <Route exact path="/sistema-de-registro-de-preco" element={<RegistroPreco/>}/>
                     
-                    <Route path="/planejamento/:rota" element={<DPlanejamentoContratacoes/>}>
-                        <Route path=":rota" element={<DPlanejamentoContratacoes/>}></Route>
-                    </Route>
+       
                     <Route path="/licitacoes/:rota" element={<DLicitacoes/>}>
                         <Route path=":rota" element={<DLicitacoes/>}>
                         <Route path=":rota" element={<DLicitacoes/>}></Route>
@@ -77,7 +77,7 @@ function App() {
                     <Route path="/normas/:rota" element={<DNormas/>}>
                         <Route path=":rota" element={<DNormas/>}></Route>
                     </Route>
-                    <Route path="/planejamento/:rota" element={<DPlanejamentoContratacoes/>}>
+                    <Route path="/planejamento-de-contratacoes/:rota" element={<DPlanejamentoContratacoes/>}>
                         <Route path=":rota" element={<DPlanejamentoContratacoes/>}></Route>
                     </Route>
                     <Route path="/gestores/:rota" element={<DGestores/>}>
@@ -86,11 +86,13 @@ function App() {
                     <Route path="/contratacoes/:rota" element={<DContratacoes/>}>
                         <Route path=":rota" element={<DContratacoes/>}></Route>
                     </Route>
-                    <Route path="/registro-de-preco/:rota" element={<DRegistroPreco/>}>
+                    <Route path="/sistema-de-registro-de-preco/:rota" element={<DRegistroPreco/>}>
                         <Route path=":rota" element={<DRegistroPreco/>}></Route>
                     </Route>
                     <Route path="/sistemas/:rota" element={<DSistemas/>}>
+                        <Route path=":rota" element={<DSistemas/>}>
                         <Route path=":rota" element={<DSistemas/>}></Route>
+                        </Route>
                     </Route>
                     <Route path="/servidores/:rota" element={<DServidores/>}>
                         <Route path=":rota" element={<DServidores/>}></Route>

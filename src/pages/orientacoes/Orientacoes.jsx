@@ -10,7 +10,7 @@ const Orientacoes = () => {
     {
         async function getPost()
         {
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/orientacoes-para-editores`)
+            const response = await axios.post(`https://apps.tre-ce.jus.br/api-portal-de-compras/orientacoes-para-editores`)
             setPost(response.data)
         }
         getPost();

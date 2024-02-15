@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="pl-4 flex items-center">
             <a
               className="toggleColour text-black no-underline hover:no-underline font-bold text-3xl lg:text-4xl"
-              href="/"
+              href="/portal-de-compras"
               style={{ color: isHovering ? 'green' : 'black' }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -44,7 +44,7 @@ const Navbar = () => {
                   style={{ color: hoverStates[0] ? 'green' : 'black' }}
                   onMouseEnter={() => handleMouseEnter(0)}
                   onMouseLeave={() => handleMouseLeave(0)}
-                  to="/"> Início </NavLink>
+                  to=""> Início </NavLink>
               </li>
 
               <li>
@@ -53,7 +53,7 @@ const Navbar = () => {
                   style={{ color: hoverStates[1] ? 'green' : 'black' }}
                   onMouseEnter={() => handleMouseEnter(1)}
                   onMouseLeave={() => handleMouseLeave(1)}
-                  to="/planejamento"> Planejamento </NavLink>
+                  to="/planejamento-de-contratacoes"> Planejamento </NavLink>
               </li>
 
               <li>
@@ -89,7 +89,7 @@ const Navbar = () => {
                   style={{ color: hoverStates[5] ? 'green' : 'black' }}
                   onMouseEnter={() => handleMouseEnter(5)}
                   onMouseLeave={() => handleMouseLeave(5)}
-                  to="/registro-de-preco"> Registro de preços </NavLink>
+                  to="/sistema-de-registro-de-preco"> Registro de preços </NavLink>
               </li>
 
               <li>

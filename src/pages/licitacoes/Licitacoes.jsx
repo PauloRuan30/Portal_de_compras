@@ -11,7 +11,7 @@ const Licitacoes = () => {
         async function getPost()
         {
 
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/licitacoes/licitacoes`)
+            const response = await axios.post(`https://apps.tre-ce.jus.br/api-portal-de-compras/licitacoes/licitacoes`)
             setPost(response.data)
         }
         getPost();

@@ -2,6 +2,8 @@ import React from "react";
 import { StringHTML } from "../../components/StringHTML";
 import "../Main.modules.css"
 import axios from "axios";
+import "../Main.modules.css"
+
 
 const Servidores = () => {
     const [post, setPost] = React.useState(null)
@@ -10,7 +12,7 @@ const Servidores = () => {
     {
         async function getPost()
         {
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/servidores/servidores`)
+            const response = await axios.post(`https://apps.tre-ce.jus.br/api-portal-de-compras/servidores/servidores`)
             setPost(response.data)
         }
         getPost();
@@ -24,7 +26,7 @@ const Servidores = () => {
                 Aqui está a estrutura da página de Planejamento Contratações
             </p>
 
-            <div className="flex flex-auto text-xl">
+            <div id="content" className="flex flex-auto text-xl items-center">
                 <StringHTML htmlString={post.data} />
             </div>
         </div>

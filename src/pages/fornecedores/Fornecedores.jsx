@@ -11,7 +11,7 @@ const Fornecedores = () => {
         async function getPost()
         {
 
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/fornecedores/fornecedores`)
+            const response = await axios.post(`https://apps.tre-ce.jus.br/api-portal-de-compras/fornecedores/fornecedores`)
             setPost(response.data)
         }
         getPost();
@@ -26,7 +26,7 @@ const Fornecedores = () => {
                 Aqui está a estrutura da página de Contratações
             </p>
 
-            <div className="flex flex-auto text-xl">
+            <div id="content" className="flex flex-auto text-xl">
                 <StringHTML htmlString={post.data} />
             </div>
         </div>

@@ -1,31 +1,85 @@
-import React, { useState } from "react";
-import Cards from "./Cards";
-import Banner_Curve from "./Banner_Curve";
+import React from "react";
+import { useLocation } from "react-router-dom";
 
 const Banner = () => {
+  const location = useLocation();
+  const pathName = location.pathname;
+
+  // Função para decidir o conteúdo do banner com base na rota atual
+  const getBannerContent = () => {
+    switch (pathName) {
+        case "/planejamento-de-contratacoes":
+        return {
+          title: "Planejamento de contratações",
+          description: "Aqui você encontrará informações sobre nossos sistemas.",
+        };
+        case "/contratacoes":
+        return {
+          title: "Contratações",
+          description: "Aqui você encontrará informações sobre nossos sistemas.",
+        };
+        case "/licitacoes":
+        return {
+          title: "Bem-vindo à página de Licitações",
+          description: "Aqui você encontrará informações sobre nossos sistemas.",
+        };
+        case "/normas":
+        return {
+          title: "Bem-vindo à página de Sistemas",
+          description: "Aqui você encontrará informações sobre nossos sistemas.",
+        };
+        case "/sistema-de-registro-de-preco":
+        return {
+          title: "Bem-vindo à página de Sistemas",
+          description: "Aqui você encontrará informações sobre nossos sistemas.",
+        };
+        case "/sistemas":
+        return {
+          title: "Bem-vindo à página de Sistemas",
+          description: "Aqui você encontrará informações sobre nossos sistemas.",
+        };
+        case "/fornecedores":
+        return {
+          title: "Bem-vindo à página de Sistemas",
+          description: "Aqui você encontrará informações sobre nossos sistemas.",
+        };
+        case "/gestores-e-fiscais":
+        return {
+          title: "Bem-vindo à página de Sistemas",
+          description: "Aqui você encontrará informações sobre nossos sistemas.",
+        };
+        case "/unidades-requisitantes":
+        return {
+          title: "Bem-vindo à página de Serviços",
+          description: "Aqui você encontrará informações sobre nossos serviços.",
+        };
+        case "/treinamento-para-editores":
+        return {
+          title: "Bem-vindo à página de Serviços",
+          description: "Aqui você encontrará informações sobre nossos serviços.",
+        };
+    }
+  };
+
+  const bannerContent = getBannerContent();
+
+  // Verifica se há conteúdo a ser exibido no banner
+  if (!bannerContent) {
+    return null; // Retorna nulo se não houver conteúdo a ser exibido
+  }
+
+  const { title, description } = bannerContent;
+
   return (
     <div id="div_geral">
-      <div class="py-5 pt-20 bg-gradient-to-r from-green-800 to-green-700">
-        <div class="px-20 flex flex-wrap flex-col md:flex-row items-center bg-gradient-to-r from-green-800 to-green-700">
-          <div class="flex flex-col w-full md:w-auto justify-center items-start text-center md:text-left">
-            {/* <p class="uppercase tracking-loose w-full">What business are you?</p> */}
-            <h1 class="my-2 text-5xl font-bold leading-tight text-white">
-              Seja bem-vindo ao Portal de Compras
-            </h1>
-            <p class="text-2xl mb-6 text-white">
-              Bem-vindo ao nosso portal de compras, uma plataforma dedicada à
-              transparência e conformidade nas aquisições públicas.
-              <br />
-              Aqui, buscamos facilitar o acesso a informações sobre licitações,
-              dispensas eletrônicas, obras, e serviços,
-              <br />
-              promovendo uma gestão pública transparente e eficiente.
-            </p>
+      <div className="py-5 pt-20 bg-gradient-to-r from-green-800 to-green-700">
+        <div className="px-20 flex flex-wrap flex-col md:flex-row items-center bg-gradient-to-r from-green-800 to-green-700">
+          <div className="flex flex-col w-full md:w-auto justify-center items-start text-center md:text-left">
+            <h1 className="my-2 text-5xl font-bold leading-tight text-white">{title}</h1>
+            <p className="text-2xl mb-6 text-white">{description}</p>
           </div>
         </div>
       </div>
-      <Banner_Curve />
-      <Cards />
     </div>
   );
 };

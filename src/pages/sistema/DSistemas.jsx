@@ -13,7 +13,7 @@ const DSistemas = () => {
         async function getPost()
         {
 
-            const response = await axios.post(`http://cevmdocker-hmg-01.tre-ce.gov.br:1503/sistemas/${rota}`)
+            const response = await axios.post(`https://apps.tre-ce.jus.br/api-portal-de-compras/sistemas/${rota}`)
             setPost(response.data)
         }
         getPost();
