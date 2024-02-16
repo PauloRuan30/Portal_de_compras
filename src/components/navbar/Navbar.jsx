@@ -30,7 +30,8 @@ const Navbar = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <img className="h-20 pr-2 fill-current inline" src="/Marca_TRE.svg">
+              <img className="h-20 pr-2 fill-current inline" src={process.env.PUBLIC_URL + '/Marca_TRE.svg'} >
+
                 {/* SVG content */}
               </img>
               Portal de Compras

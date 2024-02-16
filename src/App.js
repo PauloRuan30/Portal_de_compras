@@ -1,106 +1,81 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 /* Componentes */
-import Infos from './components/Infos';
-import Footer from './components/footer/Footer';
-import Navbar from './components/navbar/Navbar';
-import HomeBanner from './components/banner/HomeBanner'
 import Banner from './components/banner/Banner';
-import Avisos from './components/Avisos';
 import Cards from './components/Cards';
+import Footer from './components/footer/Footer';
+import HomeBanner from './components/banner/HomeBanner';
+import Infos from './components/Infos';
+import Navbar from './components/navbar/Navbar';
+import Avisos from './components/Avisos';
 
 /* Páginas */
-import Inicio from "./pages/inicio/Inicio";
-import Fornecedores from "./pages/fornecedores/Fornecedores";
-import Licitacoes from "./pages/licitacoes/Licitacoes";
-import Normas from "./pages/normas/Normas"; 
-import Planejamento from "./pages/planejamento_e_contratacoes/Planejamento_de_contracoes";
-import Sistemas from "./pages/sistema/Sistemas";
-import Servidores from "./pages/servidores/Servidores";
 import Comunicados from "./pages/comunicados/Comunicados";
-import Gestores from "./pages/gestores/Gestores";
-import Orientacoes from "./pages/orientacoes/Orientacoes";
 import Contratacoes from "./pages/contratacoes/Contratacoes";
-// import DR-Fornecedores from "./pages/fornecedores/DFornecedores";
-import DNormas from "./pages/normas/DNormas";
-import DSistemas from "./pages/sistema/DSistemas";
-import DPlanejamentoContratacoes from "./pages/planejamento_e_contratacoes/DPlanejamento_e_contratacoes";
+import DContratacoes from "./pages/contratacoes/DContratacoes"
 import DFornecedores from "./pages/fornecedores/DFornecedores";
 import DGestores from "./pages/gestores/DGestores";
-import DContratacoes from "./pages/contratacoes/DContratacoes";
 import DLicitacoes from "./pages/licitacoes/DLicitacoes";
-import RegistroPreco from "./pages/registro_de_preco/Registro_de_preco";
+import DNormas from "./pages/normas/DNormas";
+import DPlanejamentoContratacoes from "./pages/planejamento_e_contratacoes/DPlanejamento_e_contratacoes";
 import DRegistroPreco from "./pages/registro_de_preco/DRegistro_de_preco";
 import DServidores from "./pages/servidores/DServidores";
-/* Hooks, stringtoHtml, etc */
+import DSistemas from "./pages/sistema/DSistemas";
+import Fornecedores from "./pages/fornecedores/Fornecedores";
+import Gestores from "./pages/gestores/Gestores";
+import Inicio from "./pages/inicio/Inicio";
+import Licitacoes from "./pages/licitacoes/Licitacoes";
+import Normas from "./pages/normas/Normas";
+import Orientacoes from "./pages/orientacoes/Orientacoes";
+import Planejamento from "./pages/planejamento_e_contratacoes/Planejamento_de_contracoes";
+import RegistroPreco from "./pages/registro_de_preco/Registro_de_preco";
+import Servidores from "./pages/servidores/Servidores";
+import Sistemas from "./pages/sistema/Sistemas";
 
 function App() {
     return (
         <Router basename="/portal-de-compras">
-            {/* Rotas estáticas da Navbar */}
-            <Navbar/>
-            <Banner/>
-                <Routes>
-                    <Route exact path="/" element={<>
-                        <HomeBanner/>
-                        <Cards/>
-                        <Avisos/>
-                        <Infos/>
-                        <Inicio  />
-                    </>} />
-                    <Route exact path="/licitacoes"  element={<Licitacoes />} />
-                    <Route exact path="/normas" element={<Normas/>}/>
-                    <Route exact path="/planejamento-de-contratacoes" element={<Planejamento/>}/>
-                    <Route exact path="/orientacoes" element={<Orientacoes/>}/>
-                    <Route exact path="/fornecedores" element={<Fornecedores/>}/>
-                    <Route exact path="/sistemas" element={<Sistemas/>}/>
-                    <Route exact path="/gestores" element={<Gestores/>}/>
-                    <Route exact path="/servidores" element={<Servidores/>}/>
-                    <Route exact path="/comunicados" element={<Comunicados/>}/>
-                    <Route exact path="/contratacoes" element={<Contratacoes/>}/>
-                    <Route exact path="/sistema-de-registro-de-preco" element={<RegistroPreco/>}/>
-                    
-       
-                    <Route path="/licitacoes/:rota" element={<DLicitacoes/>}>
-                        <Route path=":rota" element={<DLicitacoes/>}>
-                        <Route path=":rota" element={<DLicitacoes/>}></Route>
-                        </Route>
+            <Navbar />
+            <Banner />
+            <Routes>
+                <Route exact path="/" element={
+                    <>
+                        <HomeBanner />
+                        <Cards />
+                        <Avisos />
+                        <Infos />
+                        <Inicio />
+                    </>
+                } />
+                <Route path="/licitacoes" element={<Licitacoes />} />
+
+                <Route path="/licitacoes/:rota" element={<DLicitacoes />} >
+                    <Route path=":rota" element={<DLicitacoes />} >
+                    <Route path=":rota" element={<DLicitacoes />} />
                     </Route>
-                    <Route path="/fornecedores/:rota" element={<DFornecedores/>}>
-                        <Route path=":rota" element={<DFornecedores/>}></Route>
-                    </Route>
-                    <Route path="/normas/:rota" element={<DNormas/>}>
-                        <Route path=":rota" element={<DNormas/>}></Route>
-                    </Route>
-                    <Route path="/planejamento-de-contratacoes/:rota" element={<DPlanejamentoContratacoes/>}>
-                        <Route path=":rota" element={<DPlanejamentoContratacoes/>}></Route>
-                    </Route>
-                    <Route path="/gestores/:rota" element={<DGestores/>}>
-                        <Route path=":rota" element={<DGestores/>}></Route>
-                    </Route>
-                    <Route path="/contratacoes/:rota" element={<DContratacoes/>}>
-                        <Route path=":rota" element={<DContratacoes/>}></Route>
-                    </Route>
-                    <Route path="/sistema-de-registro-de-preco/:rota" element={<DRegistroPreco/>}>
-                        <Route path=":rota" element={<DRegistroPreco/>}></Route>
-                    </Route>
-                    <Route path="/sistemas/:rota" element={<DSistemas/>}>
-                        <Route path=":rota" element={<DSistemas/>}>
-                        <Route path=":rota" element={<DSistemas/>}></Route>
-                        </Route>
-                    </Route>
-                    <Route path="/servidores/:rota" element={<DServidores/>}>
-                        <Route path=":rota" element={<DServidores/>}></Route>
-                    </Route>
-                </Routes>
-                
-            {/* */}
-            <Footer/>
+                </Route>
+
+                <Route path="/normas" element={<Normas />} />
+                <Route path="/normas/:rota" element={<DNormas />} />
+                <Route path="/planejamento-de-contratacoes" element={<Planejamento />} />
+                <Route path="/planejamento-de-contratacoes/:rota" element={<DPlanejamentoContratacoes />} />
+                <Route path="/orientacoes" element={<Orientacoes />} />
+                <Route path="/fornecedores" element={<Fornecedores />} />
+                <Route path="/fornecedores/:rota" element={<DFornecedores />} />
+                <Route path="/sistemas" element={<Sistemas />} />
+                <Route path="/sistemas/:rota" element={<DSistemas />} />
+                <Route path="/gestores" element={<Gestores />} />
+                <Route path="/gestores/:rota" element={<DGestores />} />
+                <Route path="/servidores" element={<Servidores />} />
+                <Route path="/servidores/:rota" element={<DServidores />} />
+                <Route path="/comunicados" element={<Comunicados />} />
+                <Route path="/contratacoes" element={<Contratacoes />} />
+                <Route path="/contratacoes/:rota" element={<DContratacoes />} />
+                <Route path="/sistema-de-registro-de-preco" element={<RegistroPreco />} />
+                <Route path="/sistema-de-registro-de-preco/:rota" element={<DRegistroPreco />} />
+            </Routes>
+            <Footer />
         </Router>
     );
 }
