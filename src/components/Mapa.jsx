@@ -59,21 +59,41 @@ const Mapa = () =>
                         <a class="text-gray-100 hover:text-gray-200 font-semibold block text-lg" href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
                       </li>
                     </ul> */}
-                    <ul className="list-reset lg:flex justify-end flex-1 items-center text-xl font-semibold">
+                    <ul className="list-reset lg:flex justify-end  items-center text-xl font-semibold">
                     {items.map((item, index) => {
                         const itemName = Object.keys(item)[0];
                         const itemUrl = item[itemName];
                         return (
                             <li key={index}>
                             <div
-                            className="relative inline-block"
+                            className="relative inline-block "
                             >
                             <NavLink
-                                className="hover:underline"
+                                className="hover:underline text-white text-sm"
                                 to={itemUrl.replace("/portal-de-compras/","/")}
                             >
                                 {itemName}
                             </NavLink>
+                            
+                            <ul>
+                            {item.elements.map((i, e) =>
+                            {
+                              const iName = Object.keys(i)[0];
+                              const iUrl = i[iName];
+                              console.log(iUrl)
+                              return (
+                                <li>
+                                  <div className="relative inline-block ">
+                                    <NavLink
+                                        className="hover:underline text-white text-sm"
+                                        to={iUrl.replace("/portal-de-compras/","/")}>
+                                          
+                                        {iName}
+                                    </NavLink>
+                                  </div>
+                                </li>
+                              )})}
+                              </ul>
                             </div>
                         </li>
                         )
