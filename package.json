@@ -10,6 +10,8 @@
     "@testing-library/user-event": "^13.2.1",
     "autoprefixer": "^10.4.2",
     "axios": "^1.6.7",
+    "framer-motion": "^11.0.5",
+    "hamburger-react": "^2.5.0",
     "postcss": "^8.4.7",
     "prime-react": "^1.0.0",
     "react": "^17.0.2",
@@ -19,6 +21,7 @@
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.5",
+    "react-use": "^17.5.0",
     "tailwindcss": "^3.0.23",
     "web-vitals": "^2.1.0"
   },
