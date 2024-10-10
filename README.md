@@ -7,7 +7,7 @@ O projeto na epoca foi feito em duas Stack de Teste, porem só uma foi para a fr
 
 > ##### Stack de Teste
 > _Frontend_
-> - Svelt
+> - Svelte
 > - Tailwind css
 > 
 > _Backend_
