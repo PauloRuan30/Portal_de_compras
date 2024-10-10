@@ -2,14 +2,14 @@ version: '3.4'
 
 services:
   portal-de-compras-prod:
-    image: cevmdocker-registry.tre-ce.jus.br:5000/portal-de-compras:hmg
+    image: test:hmg
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     networks:
       - portal
     ports:
-      - "1504:3000"
+      - "1550:3000"
 networks:
   portal:
     name: portal
